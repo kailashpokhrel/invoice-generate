@@ -18,7 +18,7 @@
                     <div class="invoice-title">
                         <div class="mb-4">
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                Invoice
+                                Add Item
                               </button>
 
                             
@@ -27,7 +27,7 @@
                                     <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Create Invoice</h1>
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Create Invoice - Add Item</h1>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
@@ -107,12 +107,7 @@
                                             $ {{ each.total_price_item }} 
                                             <a href="{% url 'remove_item' context.id each.id %}" type="button" class="btn-close" aria-label="Close"></a>
                                         </td>
-                                        <!-- <td class="text-end">$ {{ each.total_price_item }}</td> -->
-                                        <!-- <td>
-                                           <div style="margin-left: 40%;">
-                                            <a href="{% url 'remove_item' context.id each.id %}">Remove</a>
-                                           </div> 
-                                        </td> -->
+                                    
                                     </tr>
                                     {% endfor %}
                                     
@@ -121,7 +116,7 @@
                                     <!-- end tr -->
                                     
                                     
-                                    <tr>
+                                    <tr class="mt-4">
                                         <th scope="row" colspan="4" class="border-0 text-end">
                                             Tax</th>
                                         <td class="border-0 text-end">${{ context.tax }}</td>
